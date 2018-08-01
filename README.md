@@ -9,13 +9,13 @@ Table of Contents
 *   [Features](#features)
 *   [Deployment](#deployment)
 *   [Posts](#posts)
-*   [Other Authors](#Authors)
-*   [Disqus Comments](#Disqus)
-*   [Google Analytics](#Analytics)
-*   [Update favicon](#Favicon)
-*   [Credits](#Credits)
-*   [License](#License)
-*   [Donate](#Donate)
+*   [Other Authors](#authors)
+*   [Disqus Comments](#disqus)
+*   [Google Analytics](#analytics)
+*   [Update favicon](#favicon)
+*   [Credits](#credits)
+*   [License](#license)
+*   [Donate](#donate)
 
 * * *
 
