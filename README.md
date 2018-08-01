@@ -21,7 +21,7 @@ Table of Contents
 
 ### Demo
 
-Check the theme in action [Demo](https://artemsheludko.github.io/lokmont/)
+Check the theme in action [Demo](https://lokmont-jekyll.anvodstudio.com/)
 
 ![Main page preview](https://github.com/artemsheludko/lokmont/blob/master/images/home-page.jpg?raw=true)
 
@@ -50,8 +50,6 @@ The post page would look like this:
 * * *
 
 ### Deployment
-
-Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
 
 To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
 

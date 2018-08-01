@@ -99,10 +99,8 @@ A paragraph looks like this — dolor amet cray stumptown fingerstache neutra fo
 
 ***
 
-### Videos
+### Video
 
-#### Vimeo and Youtube
+#### Youtube
 
-<iframe src="https://player.vimeo.com/video/271649596" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<hr/>
 <iframe src="https://www.youtube.com/embed/iWowJBRMtpc" frameborder="0" allowfullscreen></iframe>
