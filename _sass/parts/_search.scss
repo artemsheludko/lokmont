@@ -1,0 +1,111 @@
+// SEARCH BOX
+.search-box {
+  width: 100%;
+  height: 60px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+  }
+}
+
+.search-toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: $white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
+  &:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.search-form {
+  input[type="text"] {
+    font-size: 14px;
+    color: $white;
+    background-color: $blue;
+    border: none;
+  }
+  ::placeholder {
+      color: $white;
+      opacity: 1;
+  }
+
+  :-ms-input-placeholder {
+    color: $white;
+  }
+
+  ::-ms-input-placeholder {
+    color: $white;
+  }
+}
+
+.search-field {
+  height: 60px;
+  width: 100%;
+  margin-left: -20px;
+  padding: 0 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btn-close {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  background-color: darken($blue, 10%);
+  transition: all 0.3s ease-in-out;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($blue, 15%);
+  }
+}
+
+.search-results-list {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 40px 15px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  list-style: none;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.97);
+  li {
+    margin-bottom: 20px;
+    a {
+      font-size: 18px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #2d2d2d;
+      transition: all 0.2s ease;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

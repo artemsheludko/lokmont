@@ -1,0 +1,14 @@
+.pagination-box {
+  margin-bottom: 110px;
+  padding: 0 15px;
+  text-align: center;
+  .load-more {
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pagination-box {
+    margin-bottom: 50px;
+  }
+}

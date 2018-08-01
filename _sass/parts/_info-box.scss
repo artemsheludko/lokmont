@@ -1,0 +1,116 @@
+.info-box {
+  width: 100%;
+  min-height: 60px;
+  background-color: $white;
+  padding: 0 0 60px;
+}
+
+.info-social {
+  width: 50%;
+  float: left;
+}
+
+.info-social-list {
+  width: 100%;
+  list-style: none;  
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0;
+    margin: 0;
+    a {
+      width: 20%;
+      float: left;
+      text-align: center;
+      line-height: 60px;
+      &:hover {
+        background-color: $blue-transparency;
+      }
+    }
+    a, span {
+      font-size: 21px;
+      color: $black;
+      transition: all 0.2s ease;
+      &:hover {
+        color: $blue;
+      }
+    }
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.info-newsletter {
+  width: 50%;
+  float: right;
+}
+
+.newsletter {
+  margin: 0 auto;
+  border: none;
+}
+
+.newsletter-form {
+  input[type="email"] {
+    color: $lightengray;
+  }
+  .c-newsletter-form-group {
+    display: flex;
+  }
+}
+
+.c-newsletter-email {
+  width: 70%;
+  height: 60px;
+  font-size: 14px;
+  padding: 10px 15px;
+  font-weight: 700;
+  border: 1px solid rgba(120, 120, 120, 0.19);
+  outline: none;
+}
+
+.newsletter-button {
+  display: inline-block;
+  width: 30%;
+  height: 60px;
+  font-size: 14px;
+  padding: 20px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: $white;
+  background-color: $blue;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: darken($blue, 15%);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .info-box {
+    padding: 40px 0;
+  }
+  .info-social, .info-newsletter {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .info-social-list li a, .info-social-list li span {
+    font-size: 18px;
+  }
+  .c-newsletter-email {
+    height: 50px;
+  }
+  .newsletter-button {
+    height: 50px;
+    padding: 15px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .newsletter-button {
+    font-size: 13px;
+  }
+}

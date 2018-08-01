@@ -1,0 +1,25 @@
+.top {
+  position: fixed;
+	bottom: 20px;
+	color: #666;
+	font-size: 21px;
+	text-align: center;
+	cursor: pointer;
+	transition: all .25s ease;
+	right: -100px;
+	z-index: 10;
+	opacity: .5;
+  
+  i {
+    line-height: 0;
+  }
+  
+  &.top-active {
+    right: 20px;
+  }
+  
+  &:hover {
+    color: $blue;
+		opacity: 1;
+  }
+}

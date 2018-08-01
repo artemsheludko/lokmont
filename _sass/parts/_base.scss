@@ -1,0 +1,279 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.6;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: $white;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.body-post {
+    background-color: #f5fafc;
+  }
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 28px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 30px;
+  color: $black;
+}
+
+p {
+  font-family: 'PT Serif', serif;
+  line-height: 1.58;
+  margin: 0 0 30px;
+  color: rgba(0, 0, 0, .8);
+}
+
+a {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+li {
+  margin: 0 0 15px;
+}
+
+blockquote {
+  border-left: 3px solid $lightblue;
+  padding: 10px 0 10px 30px;
+  margin: 20px 0;
+  font-size: 18px;
+  font-style: italic;
+  background: rgba(220,235,245,0.2);
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+pre {
+  overflow: auto;
+  padding: 25px;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+  display: block;
+  margin: 60px 0;
+  text-align: center;
+  font-size: 50px;
+  line-height: 0;
+  letter-spacing: 10px;
+  border: 0;
+  &:before {
+    content: "...";
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.8);
+    top: -15px;
+  }
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+}
+
+table {
+  font-size: 12px;
+  color:#333333;
+  width: 100%;
+  border-width: 1px;
+  border-color: #729ea5;
+  border-collapse: collapse;
+}
+
+table th {
+  font-size: 16px;
+  color: $white;
+  background-color:#6cd0ef;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #729ea5;
+  text-align: left;
+}
+
+table tr {
+  background-color: #d4e3e5;
+  transition: all .3s ease;
+  &:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+}
+
+table td {
+  font-size: 14px;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #729ea5;
+}
+
+table tr:hover {
+  background-color: $white;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: transparent;
+  z-index: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.7);
+  transition: all .2s ease;
+  &.show {
+    pointer-events: auto;
+    filter: none;
+    opacity: 1;
+  }
+}
+
+.full-page-container {
+  min-height: 100vh;
+  position: relative;
+  right: 0;
+  transition: right .35s cubic-bezier(0.565, 1.65, 0.765, 0.90);
+  &.open {
+    right: 250px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;  
+  width: 1440px;
+  max-width: 100%;
+  margin: 80px auto 80px;
+  transition: all .35s ease;
+  @media screen and (max-width: 480px) {
+    margin: 50px auto 20px;
+  }
+}
+
+.wrapper-content {
+  position: relative;
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid $blue;
+  border-radius: 0;
+  background-color: transparent;
+  color: $blue;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &-middle {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  &-big {
+    width: 100%;
+    display: block;
+  }
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.clearfix::after, .clearfix::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+::-moz-selection {
+  background: $blue-highlighted;
+  color: #ffffff;
+}
+
+::selection {
+  background: $blue-highlighted;
+  color: #ffffff;
+}

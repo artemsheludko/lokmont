@@ -1,0 +1,137 @@
+.site-header {
+  height: 60px;
+  position: relative;
+  background-color: $blue;
+  overflow: hidden;
+}
+
+.site-logo {
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  a {
+    display: inline-block;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.navigation-wrap {
+  height: 60px;
+  position: relative;
+}
+
+.site-nav {
+  float: left;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  a {
+    position: relative;
+    font-size: 12px;
+    padding: 22px 30px;    
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.8px;
+    line-height: 60px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    transition: all 0.2s ease;
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  &.open {
+    transform: translateX(0px);
+  }
+}
+
+.nav-toggle, .nav-toggle-close {
+  display: none;
+  font-size: 15px;
+  position: absolute;
+  cursor: pointer;
+  transition: all .25s ease;
+  z-index: 10;
+  &:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+.nav-toggle {
+  top: 50%;
+  right: 45px;
+  transform: translateY(-50%);
+  color: $white;
+}
+.nav-toggle-close {
+  right: 20px;
+  top: 16px;
+  color: $black;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper-content {
+    position: static;
+  }
+
+  .site-logo {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .navigation-wrap {
+    width: 250px;
+    height: 100vh;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    bottom: 0;
+    left: auto;
+    background-color: rgba(0, 120, 217, 0.80);
+    overflow-y: auto;
+    z-index: 10;
+    transition: right .35s cubic-bezier(0.565, 1.65, 0.765, 0.90);
+    &.open {
+      right: 0;
+    }
+  }
+  .site-nav {
+    float: none;
+    transform: none;
+    top: 0;
+    left: 0;
+    margin-bottom: 40px;
+    a {
+      display: block;
+      text-align: center;
+      line-height: 0.9;
+      font-size: 12px;
+      padding: 25px 30px;
+      margin: 0;
+      border-bottom: 1px solid rgba(31, 42, 51, 0.1);
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: darken(rgba(0, 120, 217, 0.80), 10%);
+        color: $white;
+      }
+    }
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+  .nav-toggle-close {
+    display: none;
+  }
+}
