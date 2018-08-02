@@ -21,7 +21,7 @@ Table of Contents
 
 ### Demo
 
-Check the theme in action [Demo](https://lokmont-jekyll.anvodstudio.com/)
+Check the theme in action [Demo](https://lokmont-jekyll.netlify.com/)
 
 ![Main page preview](https://github.com/artemsheludko/lokmont/blob/master/images/home-page.jpg?raw=true)
 
